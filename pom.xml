@@ -24,41 +24,12 @@
         <artifactId>jaxws-rt</artifactId>
         <version>4.0.2</version>
     </dependency>
+
     <dependency>
         <groupId>com.squareup.okhttp3</groupId>
         <artifactId>okhttp</artifactId>
         <version>4.10.0</version> <!-- Use the latest version available -->
     </dependency>
+
 </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-codegen-plugin</artifactId>
-                <version>${cxf.version}</version>
-                <executions>
-                    <execution>
-                        <id>generate-sources</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/data.wsdl</wsdl>
-                                    <packagenames>
-                                        <packagename>io.codejournal.maven.wsdl2java</packagename>
-                                    </packagenames>
-                                </wsdlOption>
-
-                            </wsdlOptions>
-                        </configuration>
-                        <goals>
-                            <goal>wsdl2java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

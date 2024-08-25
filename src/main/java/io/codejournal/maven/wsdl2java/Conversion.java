@@ -2,7 +2,7 @@ package io.codejournal.maven.wsdl2java;
 
 import java.util.Scanner;
 
-public class Coversion {
+public class Conversion {
     public static void main(String[] args) {
         int choice;
        do{

@@ -11,20 +11,20 @@ public class Conversion {
         // Done Fatima: I want the user to be able to convert temperature as many times as they want. Once done, they can exit
         do {
             Scanner in = new Scanner(System.in);
-            System.out.print("Choose:  \n1:CelsiusToFahrenhiet \n2:FahrenhietToCelsius \n3:Exit \n");
+            System.out.print("Choose:  \n1:CelsiusToFahrenheit \n2:FahrenheitToCelsius \n3:Exit \n");
             choice = Integer.parseInt(in.nextLine());
-            System.out.print("Enter Number:");
             float value;
-            value = Float.parseFloat(in.nextLine());
-
             switch (choice) {
                 case 1:
                     //FIXME Nadia: repetitive code. Rather move this outside the switch for both case 1 and 2
                     //Fixed Fatima-Done
+                    String Unit= "Celsius";
+                    value=Input_temp(Unit);
                     TempConversion.CelsiusToFahrenhiet(value);
                     break;
                 case 2:
-
+                    Unit= "Fahrenheit";
+                    value=Input_temp(Unit);
                     TempConversion.FahrenhietToCelsius(value);
                     break;
                 case 3:
@@ -37,5 +37,13 @@ public class Conversion {
 
         } while (choice != 4);
 
+
+    }
+        public static float Input_temp(String Unit){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Temperature in "+Unit+":");
+        float temp;
+        temp = Float.parseFloat(in.nextLine());
+        return temp;
     }
 }

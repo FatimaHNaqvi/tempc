@@ -13,19 +13,17 @@ public class Conversion {
             Scanner in = new Scanner(System.in);
             System.out.print("Choose:  \n1:CelsiusToFahrenheit \n2:FahrenheitToCelsius \n3:Exit \n");
             choice = Integer.parseInt(in.nextLine());
-            float value;
+            String Unit;
             switch (choice) {
                 case 1:
                     //FIXME Nadia: repetitive code. Rather move this outside the switch for both case 1 and 2
                     //Fixed Fatima-Done
-                    String Unit= "Celsius";
-                    value=Input_temp(Unit);
-                    TempConversion.CelsiusToFahrenhiet(value);
+                    Unit= "Celsius";
+                    TempConversion.CelsiusToFahrenhiet(Input_temp(Unit));
                     break;
                 case 2:
                     Unit= "Fahrenheit";
-                    value=Input_temp(Unit);
-                    TempConversion.FahrenhietToCelsius(value);
+                    TempConversion.FahrenhietToCelsius(Input_temp(Unit));
                     break;
                 case 3:
                     System.exit(0);

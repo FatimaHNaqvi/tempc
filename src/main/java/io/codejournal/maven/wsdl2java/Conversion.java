@@ -19,11 +19,11 @@ public class Conversion {
                     //FIXME Nadia: repetitive code. Rather move this outside the switch for both case 1 and 2
                     //Fixed Fatima-Done
                     Unit= "Celsius";
-                    TempConversion.CelsiusToFahrenhiet(Input_temp(Unit));
+                    Temp_handler.CelsiusToFahrenheit(Input_temp(Unit));
                     break;
                 case 2:
                     Unit= "Fahrenheit";
-                    TempConversion.FahrenhietToCelsius(Input_temp(Unit));
+                    Temp_handler.FahrenheitToCelsius(Input_temp(Unit));
                     break;
                 case 3:
                     System.exit(0);

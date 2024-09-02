@@ -30,6 +30,11 @@
         <artifactId>okhttp</artifactId>
         <version>4.10.0</version> <!-- Use the latest version available -->
     </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.32</version>
+    </dependency>
 
 </dependencies>
 </project>

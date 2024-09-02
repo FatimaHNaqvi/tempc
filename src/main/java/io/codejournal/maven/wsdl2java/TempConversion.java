@@ -1,4 +1,6 @@
+// NOT in USE anymore
 //package io.codejournal.maven.wsdl2java;
+
 //
 //import okhttp3.*;
 //import org.w3c.dom.Document;
@@ -11,6 +13,7 @@
 //import java.io.IOException;
 //import java.io.StringReader;
 //
+
 //public class TempConversion {
 //
 //    //FIXME Nadia: Repetitive code. Create a separate method to handle client, requests and responses. Make use of arguments.

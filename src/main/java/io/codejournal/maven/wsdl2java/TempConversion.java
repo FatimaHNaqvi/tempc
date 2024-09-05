@@ -1,6 +1,6 @@
-// NOT in USE anymore
+// //NOT in USE anymore
 //package io.codejournal.maven.wsdl2java;
-
+//
 //import okhttp3.*;
 //import org.w3c.dom.Document;
 //import org.w3c.dom.Element;
@@ -37,7 +37,7 @@
 //    //FIXME Nadia: Repetitive code. The only difference between the 2 methods are the Element Names?
 //    // Avoid repeating code to make reviewing code simpler and less time consuming for tech leads
 //    //FIXED Fatima- Now using a single method for parsing of both celsius to fahrenheit and vise versa
-//    private static String parseSoapResponse(String responseXml, String Element_name) {
+//     static String parseSoapResponse(String responseXml, String Element_name) {
 //        try {
 //            // Initialize the DocumentBuilderFactory and DocumentBuilder
 //            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

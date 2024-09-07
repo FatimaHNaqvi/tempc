@@ -1,6 +1,5 @@
 // //NOT in USE anymore
 //package io.codejournal.maven.wsdl2java;
-//
 //import okhttp3.*;
 //import org.w3c.dom.Document;
 //import org.w3c.dom.Element;
@@ -11,7 +10,6 @@
 //import java.io.IOException;
 //import java.io.StringReader;
 //public class TempConversion {
-//
 //    //FIXME Nadia: Repetitive code. Create a separate method to handle client, requests and responses. Make use of arguments.
 //    //FIXME Fatima: Created a method to handle the client, requests and responses.
 //    static void CelsiusToFahrenhiet(float celsius) {
@@ -23,7 +21,6 @@
 //        System.out.println(parseSoapResponse(responseBody, Element_CelsiusToFahrenheit));
 //
 //    }
-//
 //    static void FahrenhietToCelsius(float fahrenheit) {
 //        String Conversion = "FahrenheitToCelsius";
 //        String temperature_in = "Fahrenheit";
@@ -31,9 +28,7 @@
 //        String Element_FahrenheitToCelsius = "FahrenheitToCelsiusResult";
 //        System.out.println("Temperature in Celsius: ");
 //        System.out.println(parseSoapResponse(responseBody, Element_FahrenheitToCelsius));
-//
 //    }
-//
 //    //FIXME Nadia: Repetitive code. The only difference between the 2 methods are the Element Names?
 //    // Avoid repeating code to make reviewing code simpler and less time consuming for tech leads
 //    //FIXED Fatima- Now using a single method for parsing of both celsius to fahrenheit and vise versa
@@ -60,7 +55,6 @@
 //            return "Error parsing response.";
 //        }
 //    }
-//
 //    public static String Client_temp(float Temperature, String Conversion, String temperature_in) {
 //        String soapRequest = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
 //                + "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
@@ -72,35 +66,26 @@
 //                + "</" + Conversion + ">"
 //                + "</soap:Body>"
 //                + "</soap:Envelope>";
-//
 //        // Create OkHttpClient instance
 //        OkHttpClient client = new OkHttpClient();
-//
 //        // Create the request body
 //        RequestBody body = RequestBody.create(soapRequest, MediaType.get("text/xml; charset=utf-8"));
-//
 //        // Build the request
 //        Request request = new Request.Builder()
 //                .url("https://www.w3schools.com/xml/tempconvert.asmx")
 //                .post(body)
 //                .addHeader("SOAPAction", "https://www.w3schools.com/xml/" + Conversion)
 //                .build();
-//
 //        // Execute the request
 //        try (Response response = client.newCall(request).execute()) {
 //            if (!response.isSuccessful()) {
 //                throw new IOException("Unexpected code " + response);
 //            }
-//
 //            // Print the response
 //            return response.body().string();
 //        } catch (IOException e) {
 //            e.printStackTrace();
-//
 //        }
 //        return "Invalid response";
 //    }
 //}
-//
-//
-//
